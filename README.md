@@ -1,7 +1,15 @@
 ﻿Mono PInvoke performance tests
 ===============================
 
-These tests compares performance of various aproaches for working with user data. 
+These tests compares performance of various aproaches for working with user data.
+
+How to run
+-------------------------------
+Execute following commands in command line
+
+    make clean
+    make
+    make run
 
 Managed code
 -------------------------------
