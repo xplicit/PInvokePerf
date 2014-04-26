@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PInvokePerf", "PInvokePerf\PInvokePerf.csproj", "{F938BBCA-B3EB-451E-8909-9B66B8CF2F6E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F938BBCA-B3EB-451E-8909-9B66B8CF2F6E}.Debug|x86.ActiveCfg = Debug|x86
+		{F938BBCA-B3EB-451E-8909-9B66B8CF2F6E}.Debug|x86.Build.0 = Debug|x86
+		{F938BBCA-B3EB-451E-8909-9B66B8CF2F6E}.Release|x86.ActiveCfg = Release|x86
+		{F938BBCA-B3EB-451E-8909-9B66B8CF2F6E}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = PInvokePerf\PInvokePerf.csproj
+	EndGlobalSection
+EndGlobal
