@@ -13,13 +13,18 @@ Execute following commands in command line
 
 Tests    
 -------------------------------
-First test is a sum counting of character codes in string from array of strings. So there is 
+The first test is a sum counting of character codes in string from array of strings. So there is 
 
     string[] arr=new string[100];
 Each string contains 100 ASCII chars, and tested functions computes sum of string chars
 
     for(int j=0;j<arr[index].Length;j++)
       sum+=arr[index][j];
+      
+Second test encodes buffer of length 16384 with fixed xor. 
+
+    for(int i=0;i<buffer.Length;i++)
+      buffer[i]^=xored;
 
 Results
 -------------------------------
