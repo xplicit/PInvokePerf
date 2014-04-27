@@ -115,6 +115,31 @@ unmanagedCount (guint16 **arr,int index)
     return sum;
 }
 
+void
+internalXor (MonoArray *arr,unsigned char xored)
+{
+    unsigned char* b=mono_array_addr(arr,unsigned char,0);
+    int len=mono_array_length(arr);
+    int i;
+
+    for(i=0;i<len;i++)
+    {
+        b[i]^=xored;
+    }
+}
+
+void
+unmanagedXor (unsigned char *arr,unsigned char xored)
+{
+    int i;
+
+    for(i=0;i<16384;i++)
+    {
+        arr[i]^=xored;
+    }
+}
+
+
 gpointer
 getAddr()
 {
@@ -125,6 +150,7 @@ void
 init()
 {
     mono_add_internal_call ("PInvokePerf.PerformanceTest::InternalCount(string[],int)",internalCount);
+    mono_add_internal_call ("PInvokePerf.PerformanceTest::InternalXor(byte[],byte)",internalXor);
     mono_add_internal_call ("PInvokePerf.PerformanceTest::getNameInternal(object)",getNameInternal);
 
 }
