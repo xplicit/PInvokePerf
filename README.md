@@ -16,30 +16,27 @@ Tests
 The first test is a sum counting of character codes in string from array of strings. So there is 
 
     string[] arr=new string[100];
-Each string contains 100 ASCII chars, and tested functions computes sum of string chars
+Each string contains 100 ASCII chars, and tested function computes sum of these chars
 
     for(int j=0;j<arr[index].Length;j++)
       sum+=arr[index][j];
       
-Second test encodes buffer of length 16384 with fixed xor. 
+Second test encodes buffer of length 16384 with fixed xor mask. 
 
     for(int i=0;i<buffer.Length;i++)
-      buffer[i]^=xored;
+      buffer[i]^=mask;
 
 Results
 -------------------------------
-In results you will see execution time in milleseconds for 10M calls of the various function implementations.
+In results you will see execution time in milleseconds for 100K calls of the tests.
 
-Managed code
--------------------------------
-All calculations are done in managed code
+* `Managed` 
+All calculations perform in managed code
 
-PInvoke
--------------------------------
-Calculations on data are done in unmanaged code working with unmanaged data. Calls to unmanaged code by PInvoke mechanism
+* `PInvoke`
+Calculations on data perform in unmanaged code working with unmanaged data. Calls to unmanaged code are made with PInvoke mechanism
 
-Internal Call
--------------------------------
-Calculations on data are done in unmanaged code working with MANAGED data in contrary to PInvoke. Calls to unmanaged code is maden with Mono Internal Calls.
+* `Internal Call`
+Calculations on data perform in unmanaged code working with MANAGED data in contrary to PInvoke. Calls to unmanaged code are made with Mono Internal Calls.
 
 
